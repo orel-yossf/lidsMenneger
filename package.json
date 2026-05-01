@@ -1,0 +1,17 @@
+{
+  "name": "lids-menneger",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build:shared": "npm run build --workspace=@lidsmenneger/shared",
+    "dev:shared": "npm run dev --workspace=@lidsmenneger/shared",
+    "dev:frontend": "npm start --workspace=lids-menneger-frontend",
+    "dev:backend": "npm run start:dev --workspace=lids-menneger-backend",
+    "build": "npm run build:shared && npm run build --workspace=lids-menneger-backend && npm run build --workspace=lids-menneger-frontend"
+  }
+}
